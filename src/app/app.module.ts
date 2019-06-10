@@ -9,6 +9,10 @@ import { NavbarComponent } from './navbar/navbar.component';
 import { SectionsalesComponent } from './sections/sectionsales/sectionsales.component';
 import { SectionordersComponent } from './sections/sectionorders/sectionorders.component';
 import { SectionhealthComponent } from './sections/sectionhealth/sectionhealth.component';
+import { BarchartComponent } from './charts/barchart/barchart.component';
+import { LinechartComponent } from './charts/linechart/linechart.component';
+import { PiechartComponent } from './charts/piechart/piechart.component';
+import { ChartsModule } from 'ng2-charts';
 
 @NgModule({
    declarations: [
@@ -17,11 +21,15 @@ import { SectionhealthComponent } from './sections/sectionhealth/sectionhealth.c
       NavbarComponent,
       SectionsalesComponent,
       SectionordersComponent,
-      SectionhealthComponent
+      SectionhealthComponent,
+      BarchartComponent,
+      LinechartComponent,
+      PiechartComponent
    ],
    imports: [
       BrowserModule,
-      RouterModule.forRoot(appRoutes)
+      RouterModule.forRoot(appRoutes),
+      ChartsModule
    ],
    providers: [],
    bootstrap: [
