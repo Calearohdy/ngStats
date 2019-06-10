@@ -14,7 +14,7 @@ const SAMPLE_SERVER: Server[] = [
 })
 export class SectionhealthComponent implements OnInit {
 
-  public server: Server[] = SAMPLE_SERVER;
+  public servers: Server[] = SAMPLE_SERVER;
   constructor() { }
 
   ngOnInit() {
