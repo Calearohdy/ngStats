@@ -11497,7 +11497,10 @@
     ".NETCoreApp,Version=v2.1": [
       "Microsoft.AspNetCore.App >= 2.1.1",
       "Microsoft.AspNetCore.Razor.Design >= 2.1.2",
-      "Microsoft.NETCore.App >= 2.1.0"
+      "Microsoft.EntityFrameWork.Design >= 2.1.2",
+      "Microsoft.EntityFrameWork.Tools >= 2.1.2",
+      "Microsoft.NETCore.App >= 2.1.0",
+      "Npgsql.EntityFrameWork.PostgreSQL >= 2.1.2"
     ]
   },
   "packageFolders": {
@@ -11550,10 +11553,22 @@
             "target": "Package",
             "version": "[2.1.2, )"
           },
+          "Microsoft.EntityFrameWork.Design": {
+            "target": "Package",
+            "version": "[2.1.2, )"
+          },
+          "Microsoft.EntityFrameWork.Tools": {
+            "target": "Package",
+            "version": "[2.1.2, )"
+          },
           "Microsoft.NETCore.App": {
             "target": "Package",
             "version": "[2.1.0, )",
             "autoReferenced": true
+          },
+          "Npgsql.EntityFrameWork.PostgreSQL": {
+            "target": "Package",
+            "version": "[2.1.2, )"
           }
         },
         "imports": [
@@ -11563,5 +11578,34 @@
         "warn": true
       }
     }
-  }
+  },
+  "logs": [
+    {
+      "code": "NU1101",
+      "level": "Error",
+      "message": "Unable to find package Microsoft.EntityFrameWork.Design. No packages exist with this id in source(s): nuget.org",
+      "libraryId": "Microsoft.EntityFrameWork.Design",
+      "targetGraphs": [
+        ".NETCoreApp,Version=v2.1"
+      ]
+    },
+    {
+      "code": "NU1101",
+      "level": "Error",
+      "message": "Unable to find package Microsoft.EntityFrameWork.Tools. No packages exist with this id in source(s): nuget.org",
+      "libraryId": "Microsoft.EntityFrameWork.Tools",
+      "targetGraphs": [
+        ".NETCoreApp,Version=v2.1"
+      ]
+    },
+    {
+      "code": "NU1101",
+      "level": "Error",
+      "message": "Unable to find package Npgsql.EntityFrameWork.PostgreSQL. No packages exist with this id in source(s): nuget.org",
+      "libraryId": "Npgsql.EntityFrameWork.PostgreSQL",
+      "targetGraphs": [
+        ".NETCoreApp,Version=v2.1"
+      ]
+    }
+  ]
 }
