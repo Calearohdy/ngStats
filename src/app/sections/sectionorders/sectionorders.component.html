@@ -1,0 +1,25 @@
+<div class="section-container">
+  <h2>Latest Orders</h2>
+  <table class="table table-inverse table-hover">
+    <thead class="thead-dark">
+      <tr>
+        <th style="text-align: center">Id</th>
+        <th style="text-align: center">Customer</th>
+        <th style="text-align: center">Amount</th>
+        <th style="text-align: center">Order Placed</th>
+        <th style="text-align: center">Order Fulfilled</th>
+        <th style="text-align: center">Status</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let order of orders">
+          <td>{{ order.id }}</td>
+          <td>{{ order.customer.name }}</td>
+          <td>{{ order.amount }}</td>
+          <td>{{ order.placed | date: 'short' }}</td>
+          <td>{{ order.fulfilled | date: 'short' }}</td>
+          <td>Status</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
