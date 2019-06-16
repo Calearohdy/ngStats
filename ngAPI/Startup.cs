@@ -30,10 +30,11 @@ namespace ngAPI
             _connectionString = Configuration["connectionString"];
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
             services.AddEntityFrameworkNpgsql().AddDbContext<ApiContext>().BuildServiceProvider();
+            services.AddTransient<DataSeed>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
-        public void Configure(IApplicationBuilder app, IHostingEnvironment env)
+        public void Configure(IApplicationBuilder app, IHostingEnvironment env, DataSeed seed)
         {
             if (env.IsDevelopment())
             {
@@ -44,8 +45,10 @@ namespace ngAPI
                 app.UseHsts();
             }
 
+            seed.SeedData(20, 100);
             app.UseHttpsRedirection();
             app.UseMvc();
+
         }
     }
 }

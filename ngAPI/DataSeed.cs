@@ -20,17 +20,18 @@ namespace ngAPI
             if (!_context.Customers.Any())
             {
                 SeedCustomers(nCustomers); // insert into db
+                _context.SaveChanges();
             }
             if (!_context.Orders.Any())
             {
                 SeedOrders(nOrders); // insert into db
+                _context.SaveChanges();
             }
             if (!_context.Servers.Any())
             {
                 SeedServers();
+                _context.SaveChanges();
             }
-
-            _context.SaveChanges();
         }
 
         private void SeedOrders(int nOrders)
@@ -79,12 +80,13 @@ namespace ngAPI
             for(var i = 1; i <= nOrders; i++)
             {
                 var placed = SeedHelper.GetPlaced();
-                var randCustomerId = rand.Next(_context.Customers.Count());
+                var randCustomerId = rand.Next(1, _context.Customers.Count());
                 var completed = SeedHelper.GetCompletedOrder(placed);
+                var customers = _context.Customers.ToList();
 
                 orders.Add(new Order {
                     Id = i,
-                    Customer = _context.Customers.First(c => c.Id == randCustomerId),
+                    Customer = customers.First(c => c.Id == randCustomerId),
                     Amount = SeedHelper.GetTotalAmount(),
                     Placed = placed,
                     Completed = completed
