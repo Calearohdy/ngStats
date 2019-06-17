@@ -15,6 +15,5 @@ namespace ngAPI
             Data = data.Skip((i - 1) * len).Take(len).ToList();
             Total = data.Count();
         }
-
     }
 }

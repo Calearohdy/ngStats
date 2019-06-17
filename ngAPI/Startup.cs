@@ -27,7 +27,12 @@ namespace ngAPI
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-            _connectionString = Configuration["connectionString"];
+
+            services.AddCors(opt => {
+                opt.AddPolicy("CorsPolicy",
+                c => c.AllowAnyOrigin().AllowAnyHeader().AllowAnyMethod()
+                );
+            });
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
             services.AddEntityFrameworkNpgsql().AddDbContext<ApiContext>().BuildServiceProvider();
             services.AddTransient<DataSeed>();
@@ -39,6 +44,7 @@ namespace ngAPI
             if (env.IsDevelopment())
             {
                 app.UseDeveloperExceptionPage();
+                app.UseCors("CorsPolicy");
             }
             else
             {
