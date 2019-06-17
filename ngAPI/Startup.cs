@@ -47,7 +47,7 @@ namespace ngAPI
 
             seed.SeedData(20, 100);
             app.UseHttpsRedirection();
-            app.UseMvc();
+            app.UseMvc(routes => routes.MapRoute("default", "api/{controller}/{action}/{id?}"));
 
         }
     }
