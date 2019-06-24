@@ -1,0 +1,15 @@
+/Users/calerohdy/Desktop/Web Development/ngStats/ngAPI/bin/Debug/netcoreapp2.1/ngAPI.deps.json
+/Users/calerohdy/Desktop/Web Development/ngStats/ngAPI/bin/Debug/netcoreapp2.1/ngAPI.runtimeconfig.json
+/Users/calerohdy/Desktop/Web Development/ngStats/ngAPI/bin/Debug/netcoreapp2.1/ngAPI.runtimeconfig.dev.json
+/Users/calerohdy/Desktop/Web Development/ngStats/ngAPI/bin/Debug/netcoreapp2.1/ngAPI.dll
+/Users/calerohdy/Desktop/Web Development/ngStats/ngAPI/bin/Debug/netcoreapp2.1/ngAPI.pdb
+/Users/calerohdy/Desktop/Web Development/ngStats/ngAPI/obj/Debug/netcoreapp2.1/ngAPI.csprojAssemblyReference.cache
+/Users/calerohdy/Desktop/Web Development/ngStats/ngAPI/obj/Debug/netcoreapp2.1/ngAPI.csproj.CoreCompileInputs.cache
+/Users/calerohdy/Desktop/Web Development/ngStats/ngAPI/obj/Debug/netcoreapp2.1/ngAPI.RazorAssemblyInfo.cache
+/Users/calerohdy/Desktop/Web Development/ngStats/ngAPI/obj/Debug/netcoreapp2.1/ngAPI.RazorAssemblyInfo.cs
+/Users/calerohdy/Desktop/Web Development/ngStats/ngAPI/obj/Debug/netcoreapp2.1/UserSecretsAssemblyInfo.cs
+/Users/calerohdy/Desktop/Web Development/ngStats/ngAPI/obj/Debug/netcoreapp2.1/ngAPI.AssemblyInfoInputs.cache
+/Users/calerohdy/Desktop/Web Development/ngStats/ngAPI/obj/Debug/netcoreapp2.1/ngAPI.AssemblyInfo.cs
+/Users/calerohdy/Desktop/Web Development/ngStats/ngAPI/obj/Debug/netcoreapp2.1/ngAPI.RazorTargetAssemblyInfo.cache
+/Users/calerohdy/Desktop/Web Development/ngStats/ngAPI/obj/Debug/netcoreapp2.1/ngAPI.dll
+/Users/calerohdy/Desktop/Web Development/ngStats/ngAPI/obj/Debug/netcoreapp2.1/ngAPI.pdb

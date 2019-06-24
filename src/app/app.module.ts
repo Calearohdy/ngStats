@@ -13,6 +13,9 @@ import { BarchartComponent } from './charts/barchart/barchart.component';
 import { LinechartComponent } from './charts/linechart/linechart.component';
 import { PiechartComponent } from './charts/piechart/piechart.component';
 import { ChartsModule } from 'ng2-charts';
+import { ServerComponent } from './server/server.component';
+import { PaginationComponent } from './pagination/pagination.component';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
    declarations: [
@@ -24,12 +27,15 @@ import { ChartsModule } from 'ng2-charts';
       SectionhealthComponent,
       BarchartComponent,
       LinechartComponent,
-      PiechartComponent
+      PiechartComponent,
+      ServerComponent,
+      PaginationComponent
    ],
    imports: [
       BrowserModule,
       RouterModule.forRoot(appRoutes),
-      ChartsModule
+      ChartsModule,
+      HttpClientModule
    ],
    providers: [],
    bootstrap: [
