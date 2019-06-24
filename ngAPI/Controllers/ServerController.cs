@@ -11,7 +11,7 @@ namespace ngAPI.Controllers
         private readonly ApiContext _context;
         public ServerController(ApiContext context)
         {
-            context = _context;
+            _context = context;
         }
 
         [HttpGet]
