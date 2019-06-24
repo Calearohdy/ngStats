@@ -2,16 +2,6 @@ import { Component, OnInit } from '@angular/core';
 import { OrdersService } from '../../../services/orders.service';
 import * as moment from 'moment';
 
-const SAMPLE_BARCHART_DATA: any[] = [
-  { data: [65, 72, 80, 69, 75, 90, 91, 87], label: 'Sale Grades' },
-  { data: [62, 76, 81, 79, 73, 95, 81, 89], label: 'Sale Grades' },
-  { data: [65, 72, 80, 69, 75, 99, 71, 77], label: 'Sale Grades' }
-];
-
-const SAMPLE_BARCHART_LABELS: string[] = [
-  'W1', 'W2', 'W3', 'W4', 'W5', 'W6', 'W7', 'W8',
-];
-
 @Component({
   selector: 'app-barchart',
   templateUrl: './barchart.component.html',
@@ -37,6 +27,7 @@ export class BarchartComponent implements OnInit {
   ngOnInit() {
     this.salesData.getOrders(1, 20)
       .subscribe(res => {
+        console.log(res);
         const localChartData = this.getChartData(res);
         this.barChartLabel = localChartData.map(date => date[0]).reverse();
         this.barChartData = [{'data': localChartData.map(data => data[1]), 'label': 'Sales'}];

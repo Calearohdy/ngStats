@@ -14,11 +14,11 @@ namespace ngAPI.Controllers
 
         public OrderController(ApiContext context)
         {
-            context = _context;
+            _context = context;
         }
 
         //Get api/order/pageNumber/pageSize
-        [HttpGet("{pageIndex: int}/{pageSize: int}")]
+        [HttpGet("{pageIndex}/{pageSize}")]
         public IActionResult Get(int pageIndex, int pageSize)
         {
             var data = _context.Orders.Include(o => o.Customer).OrderByDescending(c => c.Placed);

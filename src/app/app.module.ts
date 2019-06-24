@@ -15,6 +15,7 @@ import { PiechartComponent } from './charts/piechart/piechart.component';
 import { ChartsModule } from 'ng2-charts';
 import { ServerComponent } from './server/server.component';
 import { PaginationComponent } from './pagination/pagination.component';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
    declarations: [
@@ -33,7 +34,8 @@ import { PaginationComponent } from './pagination/pagination.component';
    imports: [
       BrowserModule,
       RouterModule.forRoot(appRoutes),
-      ChartsModule
+      ChartsModule,
+      HttpClientModule
    ],
    providers: [],
    bootstrap: [
